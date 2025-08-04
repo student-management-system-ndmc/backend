@@ -1,0 +1,5 @@
+export * from './create-class.dto'
+export * from './register-class.dto'
+export * from './create-parent.dto'
+export * from './create-student.dto'
+export * from './create-subscription.dto'

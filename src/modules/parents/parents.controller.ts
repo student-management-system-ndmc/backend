@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Body, Param, ParseIntPipe } from '@nestjs/common';
 import { ParentsService } from './parents.service';
-import { CreateParentDto } from '../../dto/create-parent.dto';
+import { CreateParentDto } from '@dto';
 
 @Controller('api/parents')
 export class ParentsController {

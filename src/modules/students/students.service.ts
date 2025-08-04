@@ -1,8 +1,8 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Student } from '../../entities/student.entity';
-import { CreateStudentDto } from '../../dto/create-student.dto';
+import { Student } from '@entities';
+import { CreateStudentDto } from '@dto';
 
 @Injectable()
 export class StudentsService {

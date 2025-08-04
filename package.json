@@ -1,7 +1,7 @@
 {
   "name": "student-management-backend",
   "version": "0.0.1",
-  "description": "NestJS backend for student management system",
+  "description": "ndmc system backend",
   "main": "dist/main",
   "scripts": {
     "build": "nest build",

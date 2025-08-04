@@ -1,9 +1,8 @@
-import { Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
-import { ClassesController } from './classes.controller';
-import { ClassesService } from './classes.service';
-import { Class } from '../../entities/class.entity';
-import { ClassRegistration } from '../../entities/class-registration.entity';
+import { Module } from '@nestjs/common'
+import { TypeOrmModule } from '@nestjs/typeorm'
+import { ClassesController } from './classes.controller'
+import { ClassesService } from './classes.service'
+import { Class, ClassRegistration } from '@entities'
 
 @Module({
   imports: [TypeOrmModule.forFeature([Class, ClassRegistration])],

@@ -1,8 +1,8 @@
 import { Injectable, BadRequestException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Subscription } from '../../entities/subscription.entity';
-import { CreateSubscriptionDto } from '../../dto/create-subscription.dto';
+import { Subscription } from '@entities';
+import { CreateSubscriptionDto } from '@dto';
 
 @Injectable()
 export class SubscriptionsService {

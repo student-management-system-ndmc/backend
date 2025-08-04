@@ -1,6 +1,6 @@
 import { Controller, Get, Post, Body, Param, ParseIntPipe } from '@nestjs/common';
 import { StudentsService } from './students.service';
-import { CreateStudentDto } from '../../dto/create-student.dto';
+import { CreateStudentDto } from '@dto';
 
 @Controller('api/students')
 export class StudentsController {
