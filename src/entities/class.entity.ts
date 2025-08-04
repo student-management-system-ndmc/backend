@@ -1,29 +1,29 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
-import { ClassRegistration } from './class-registration.entity';
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm'
+import { ClassRegistration } from './class-registration.entity'
 
 @Entity('classes')
 export class Class {
   @PrimaryGeneratedColumn()
-  id: number;
+  id: number
 
   @Column()
-  name: string;
+  name: string
 
   @Column()
-  subject: string;
+  subject: string
 
   @Column()
-  day_of_week: string; // Monday, Tuesday, etc.
+  day_of_week: string
 
   @Column()
-  time_slot: string; // e.g., "08:00-09:30"
+  time_slot: string
 
   @Column()
-  teacher_name: string;
+  teacher_name: string
 
   @Column()
-  max_students: number;
+  max_students: number
 
   @OneToMany(() => ClassRegistration, (registration) => registration.class)
-  registrations: ClassRegistration[];
+  registrations: ClassRegistration[]
 }
