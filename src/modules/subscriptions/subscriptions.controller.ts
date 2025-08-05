@@ -30,4 +30,9 @@ export class SubscriptionsController {
   findByStudent(@Param('studentId', ParseIntPipe) studentId: number) {
     return this.subscriptionsService.findByStudent(studentId)
   }
+
+  @Patch(':id/extend')
+  extendSubscription(@Param('id', ParseIntPipe) id: number, @Body() extendData: { additional_sessions: number }) {
+    return this.subscriptionsService.extendSubscription(id, extendData.additional_sessions)
+  }
 }
