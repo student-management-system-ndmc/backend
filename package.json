@@ -8,8 +8,10 @@
     "format": "prettier --write \"src/**/*.ts\" \"test/**/*.ts\"",
     "start": "nest start",
     "start:dev": "nest start --watch",
+    "start:dev:auto": "npm run migration:run && nest start --watch",
     "start:debug": "nest start --debug --watch",
     "start:prod": "node dist/main",
+    "start:prod:auto": "npm run migration:run-prod && node dist/main",
     "lint": "eslint \"{src,apps,libs,test}/**/*.ts\" --fix",
     "test": "jest",
     "test:watch": "jest --watch",
@@ -18,7 +20,8 @@
     "test:e2e": "jest --config ./test/jest-e2e.json",
     "typeorm": "typeorm -d data-source.typeorm.ts",
     "migration:generate": "run(){ typeorm-ts-node-commonjs -d data-source.typeorm.ts migration:generate src/migrations/$1; }; run",
-    "migration:run": "typeorm-ts-node-commonjs migration:run -d data-source.typeorm.ts"
+    "migration:run": "typeorm-ts-node-commonjs migration:run -d data-source.typeorm.ts",
+    "migration:run-prod": "typeorm migration:run -d dist/data-source.typeorm.js"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",

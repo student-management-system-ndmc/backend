@@ -24,8 +24,9 @@ WORKDIR /app
 
 COPY --from=build-prod /app/dist ./dist
 COPY --from=build-prod /app/node_modules ./node_modules
+COPY --from=build-prod /app/package.json ./package.json
 
-CMD ["node", "dist/src/main.js"]
 
+CMD ["sh", "-c", "npm run migration:run-prod && node dist/src/main.js"]
 
 
